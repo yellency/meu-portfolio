@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfólio - João Vitor</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header com Partículas -->
+    <header class="bg-dark text-white text-center py-4 position-relative">
+        <div id="particles-js"></div>
+        <div class="content position-relative">
+            <h1>Transforme Suas Ideias em Resultados</h1>
+            <p>Soluções em Design, Marketing e Web para Impulsionar Seu Negócio</p>
+        </div>
+    </header>
+
+    <!-- Navegação -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container">
+            <a class="navbar-brand" href="#">Portfólio</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#sobre">Sobre</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#servicos">Serviços</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#portfolio">Portfólio</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contato">Contato</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Seções do Site (Sobre, Serviços, Portfólio, Contato) -->
+    <section id="sobre" class="py-5 bg-light">
+        <div class="container">
+            <div class="row align-items-center">
+                <!-- Coluna de Imagem -->
+                <div class="col-md-5 text-center">
+                    <img src="img/robot_with_hood_creating_website.png" alt="Sobre Mim" class="img-fluid rounded-circle shadow-lg" style="width: 300px; height: 300px; object-fit: cover;">
+                </div>
+                <!-- Coluna de Texto -->
+                <div class="col-md-7">
+                    <h2 class="mb-4">Sobre Mim</h2>
+                    <p class="lead">
+                        Sou o João Vitor, especialista em criação de sites, logos e estratégias de marketing digital.
+                        Tenho como objetivo ajudar empresas a se destacarem no mercado com soluções criativas e inovadoras.
+                    </p>
+                    <p>
+                        Com anos de experiência, já trabalhei em projetos que transformaram ideias em resultados. 
+                        Meu foco é entregar trabalhos de alta qualidade que realmente façam a diferença.
+                    </p>
+                    <p>
+                        <strong>Minhas Especialidades:</strong>
+                    </p>
+                    <ul>
+                        <li>Criação de Identidade Visual</li>
+                        <li>Desenvolvimento de Sites Responsivos</li>
+                        <li>Estratégias de Marketing Digital</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+
+    <section id="servicos" class="py-5 bg-light">
+        <div class="container text-center">
+            <h2>Serviços</h2>
+            <div class="row">
+                <div class="col-md-4">
+                    <h3>Criação de Logos</h3>
+                    <p>Desenvolvo identidades visuais únicas para sua marca.</p>
+                </div>
+                <div class="col-md-4">
+                    <h3>Desenvolvimento de Sites</h3>
+                    <p>Sites modernos e responsivos para aumentar sua presença online.</p>
+                </div>
+                <div class="col-md-4">
+                    <h3>Marketing Digital</h3>
+                    <p>Estratégias para alcançar mais clientes e aumentar suas vendas.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="portfolio" class="py-5">
+        <div class="container text-center">
+            <h2>Portfólio</h2>
+            <p class="lead">Confira alguns dos meus trabalhos mais recentes:</p>
+            <div class="row gx-3 gy-3">
+                <div class="col-md-4">
+                    <div class="portfolio-item">
+                        <img src="img/sol.jpeg" alt="Projeto 1" class="img-fluid rounded">
+                        <h5>Projeto 1</h5>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="portfolio-item">
+                        <img src="img/alquimia.jpeg" alt="Projeto 2" class="img-fluid rounded">
+                        <h5>Projeto 2</h5>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="portfolio-item">
+                        <img src="img/osom.jpeg" alt="Projeto 3" class="img-fluid rounded">
+                        <h5>Projeto 3</h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contato" class="py-5 bg-light">
+        <div class="container">
+            <h2 class="text-center">Entre em Contato</h2>
+            <form id="form-contato" action="https://formspree.io/f/mvgowbkg" method="POST" class="mt-4">
+                <div class="mb-3">
+                    <label for="nome" class="form-label">Nome</label>
+                    <input type="text" id="nome" name="nome" class="form-control" placeholder="Seu nome" required>
+                </div>
+                <div class="mb-3">
+                    <label for="email" class="form-label">E-mail</label>
+                    <input type="email" id="email" name="email" class="form-control" placeholder="Seu e-mail" required>
+                </div>
+                <div class="mb-3">
+                    <label for="mensagem" class="form-label">Mensagem</label>
+                    <textarea id="mensagem" name="mensagem" class="form-control" rows="5" placeholder="Sua mensagem" required></textarea>
+                </div>
+                <div class="text-center">
+                    <button type="submit" class="btn btn-primary">Enviar</button>
+                </div>
+            </form>
+            <div id="feedback-sucesso" class="alert alert-success mt-4 d-none">
+                Sua mensagem foi enviada com sucesso! Obrigado por entrar em contato.
+            </div>
+            <div id="feedback-erro" class="alert alert-danger mt-4 d-none">
+                Ocorreu um erro ao enviar sua mensagem. Tente novamente mais tarde.
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white text-center py-3">
+        <p>&copy; 2024 - João Vitor. Todos os direitos reservados.</p>
+        
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/particles.js"></script>
+    <script>
+        // Configuração do Particles.js
+        particlesJS("particles-js", {
+            "particles": {
+                "number": { "value": 80 },
+                "color": { "value": "#ffffff" },
+                "shape": { "type": "circle" },
+                "size": { "value": 3, "random": true },
+                "move": { "speed": 2, "direction": "none", "out_mode": "out" }
+            },
+            "interactivity": {
+                "events": {
+                    "onhover": { "enable": true, "mode": "repulse" },
+                    "onclick": { "enable": true, "mode": "push" }
+                },
+                "modes": {
+                    "repulse": { "distance": 100 },
+                    "push": { "particles_nb": 4 }
+                }
+            },
+            "retina_detect": true
+        });
+
+        // JavaScript para enviar o formulário
+        document.addEventListener("DOMContentLoaded", () => {
+            const form = document.getElementById("form-contato");
+            const feedbackSucesso = document.getElementById("feedback-sucesso");
+            const feedbackErro = document.getElementById("feedback-erro");
+
+            form.addEventListener("submit", async (event) => {
+                event.preventDefault();
+
+                const formData = new FormData(form);
+
+                try {
+                    const response = await fetch(form.action, {
+                        method: form.method,
+                        body: formData,
+                        headers: {
+                            "Accept": "application/json",
+                        },
+                    });
+
+                    if (response.ok) {
+                        feedbackSucesso.classList.remove("d-none");
+                        feedbackErro.classList.add("d-none");
+                        form.reset();
+                    } else {
+                        throw new Error("Erro ao enviar formulário");
+                    }
+                } catch (error) {
+                    feedbackErro.classList.remove("d-none");
+                    feedbackSucesso.classList.add("d-none");
+                }
+            });
+        });
+    </script>
+</body>
+</html>
