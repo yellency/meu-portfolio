@@ -25,23 +25,23 @@ header {
 
 #particles-js {
     position: absolute;
-    width: 100%;
-    height: 100%;
     top: 0;
     left: 0;
-    z-index: 1; /* Partículas ficam atrás do texto */
+    width: 100%;
+    height: 100%;
+    z-index: 1; /* Partículas atrás do texto */
 }
 
 header .content {
     position: relative;
-    z-index: 2; /* Garante que o texto fique acima das partículas */
+    z-index: 2; /* Texto acima das partículas */
     padding: 20px;
 }
 
 header h1, header p {
     margin: 0;
     padding: 10px 0;
-    text-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Destaca o texto contra o fundo */
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Destaque do texto */
 }
 
 /* Portfólio */
@@ -52,34 +52,30 @@ header h1, header p {
 
 .portfolio-item {
     position: relative;
-    display: inline-block; /* Organiza os itens lado a lado */
+    display: inline-block; /* Itens lado a lado */
     margin: 20px;
     overflow: hidden;
     text-align: center;
 }
 
 .portfolio-item img {
-    width: 300px; /* Largura fixa */
-    height: 300px; /* Altura fixa */
-    object-fit: cover; /* Mantém a proporção */
+    width: 100%; /* Adapta ao tamanho da coluna */
+    height: auto; /* Mantém a proporção */
+    object-fit: cover;
     border-radius: 10px; /* Bordas arredondadas */
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Sombra */
     transition: transform 0.3s ease, box-shadow 0.3s ease; /* Efeitos no hover */
 }
 
 .portfolio-item:hover img {
-    transform: scale(1.1); /* Zoom leve */
+    transform: scale(1.05); /* Zoom suave */
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Sombra mais forte */
 }
 
 .portfolio-item h5 {
-    position: absolute;
-    bottom: 10px;
-    left: 10px;
-    color: white;
-    background-color: rgba(0, 0, 0, 0.5);
-    padding: 5px 10px;
-    border-radius: 5px;
+    margin-top: 10px;
+    font-weight: bold;
+    text-align: center;
 }
 
 /* Botões e Links */
@@ -109,47 +105,7 @@ footer a:hover {
     text-decoration: underline;
 }
 
-/* Transições Suaves */
-html {
-    scroll-behavior: smooth;
-}
-/* Estilo das Imagens no Portfólio */
-.portfolio-item img {
-    width: 100%; /* Ocupa toda a largura da coluna */
-    height: auto; /* Mantém a proporção */
-    object-fit: cover; /* Ajusta o corte da imagem */
-    border-radius: 10px; /* Bordas arredondadas */
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.portfolio-item img:hover {
-    transform: scale(1.05);
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
-}
-
-.portfolio-item h5 {
-    margin-top: 10px;
-    font-weight: bold;
-}
-
-/* Garante alinhamento consistente para as imagens */
-.portfolio-item img {
-    width: 100%; /* Adapta ao tamanho da coluna */
-    height: auto; /* Mantém a proporção */
-    border-radius: 10px; /* Bordas arredondadas */
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.portfolio-item img:hover {
-    transform: scale(1.05); /* Zoom no hover */
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
-}
-
-.portfolio-item h5 {
-    margin-top: 10px;
-    font-weight: bold;
-    text-align: center;
-}
+/* Alertas */
 .alert {
     display: block;
     text-align: center;
@@ -158,4 +114,9 @@ html {
 
 .d-none {
     display: none !important;
+}
+
+/* Transições Suaves */
+html {
+    scroll-behavior: smooth;
 }

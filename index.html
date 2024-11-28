@@ -11,10 +11,10 @@
 <body>
     <!-- Header com Partículas -->
     <header class="bg-dark text-white text-center py-4 position-relative">
-        <div id="particles-js"></div>
-        <div class="content position-relative">
+        <div id="particles-js" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 1;"></div>
+        <div class="content position-relative" style="z-index: 2;">
             <h1>Transforme Suas Ideias em Resultados</h1>
-            <p>Soluções em Design, Marketing e Web para Impulsionar Seu Negócio</p>
+            <p>Soluções em Desenvolvimento de site, Design e Marketing para Impulsionar Seu Negócio</p>
         </div>
     </header>
 
@@ -37,37 +37,40 @@
     </nav>
 
     <!-- Seções do Site (Sobre, Serviços, Portfólio, Contato) -->
-    <section id="sobre" class="py-5 bg-light">
-        <div class="container">
-            <div class="row align-items-center">
-                <!-- Coluna de Imagem -->
-                <div class="col-md-5 text-center">
-                    <img src="img/robot_with_hood_creating_website.png" alt="Sobre Mim" class="img-fluid rounded-circle shadow-lg" style="width: 300px; height: 300px; object-fit: cover;">
-                </div>
-                <!-- Coluna de Texto -->
-                <div class="col-md-7">
-                    <h2 class="mb-4">Sobre Mim</h2>
-                    <p class="lead">
-                        Sou o João Vitor, especialista em criação de sites, logos e estratégias de marketing digital.
-                        Tenho como objetivo ajudar empresas a se destacarem no mercado com soluções criativas e inovadoras.
-                    </p>
-                    <p>
-                        Com anos de experiência, já trabalhei em projetos que transformaram ideias em resultados. 
-                        Meu foco é entregar trabalhos de alta qualidade que realmente façam a diferença.
-                    </p>
-                    <p>
-                        <strong>Minhas Especialidades:</strong>
-                    </p>
-                    <ul>
-                        <li>Criação de Identidade Visual</li>
-                        <li>Desenvolvimento de Sites Responsivos</li>
-                        <li>Estratégias de Marketing Digital</li>
-                    </ul>
-                </div>
+    <!-- Barra preta separadora -->
+<div style="height: 5px; background-color: black;"></div>
+
+<section id="sobre" class="py-5 bg-light">
+    <div class="container">
+        <div class="row align-items-center">
+            <!-- Coluna de Imagem -->
+            <div class="col-md-5 text-center">
+                <img src="img/robot_with_hood_creating_website.png" alt="Sobre Mim" class="img-fluid rounded-circle shadow-lg" style="width: 300px; height: 300px; object-fit: cover;">
+            </div>
+            <!-- Coluna de Texto -->
+            <div class="col-md-7">
+                <h2 class="mb-4">Sobre Mim</h2>
+                <p class="lead">
+                    Sou o João Vitor, especialista em criação de sites, logos e estratégias de marketing digital.
+                    Tenho como objetivo ajudar empresas a se destacarem no mercado com soluções criativas e inovadoras.
+                </p>
+                <p>
+                    Com anos de experiência, já trabalhei em projetos que transformaram ideias em resultados. 
+                    Meu foco é entregar trabalhos de alta qualidade que realmente façam a diferença.
+                </p>
+                <p>
+                    <strong>Minhas Especialidades:</strong>
+                </p>
+                <ul>
+                    <li>Criação de Identidade Visual</li>
+                    <li>Desenvolvimento de Sites Responsivos</li>
+                    <li>Estratégias de Marketing Digital</li>
+                </ul>
             </div>
         </div>
-    </section>
-    
+    </div>
+</section>
+
 
     <section id="servicos" class="py-5 bg-light">
         <div class="container text-center">
@@ -148,7 +151,6 @@
     <!-- Footer -->
     <footer class="bg-dark text-white text-center py-3">
         <p>&copy; 2024 - João Vitor. Todos os direitos reservados.</p>
-        
     </footer>
 
     <!-- Scripts -->
@@ -157,25 +159,48 @@
     <script>
         // Configuração do Particles.js
         particlesJS("particles-js", {
-            "particles": {
-                "number": { "value": 80 },
-                "color": { "value": "#ffffff" },
-                "shape": { "type": "circle" },
-                "size": { "value": 3, "random": true },
-                "move": { "speed": 2, "direction": "none", "out_mode": "out" }
+    "particles": {
+        "number": {
+            "value": 50, // Reduz o número de partículas para melhor performance
+            "density": { "enable": true, "value_area": 800 }
+        },
+        "color": { "value": "#ffffff" },
+        "shape": {
+            "type": "circle",
+            "stroke": { "width": 0, "color": "#000000" }
+        },
+        "opacity": {
+            "value": 0.5,
+            "random": false
+        },
+        "size": {
+            "value": 3,
+            "random": true
+        },
+        "move": {
+            "speed": 2, // Ajuste da velocidade das partículas
+            "direction": "none",
+            "out_mode": "out",
+            "bounce": false
+        }
+    },
+    "interactivity": {
+        "events": {
+            "onhover": { "enable": true, "mode": "repulse" },
+            "onclick": { "enable": true, "mode": "push" }
+        },
+        "modes": {
+            "repulse": {
+                "distance": 100, // Reduz a distância para tornar o efeito mais leve
+                "duration": 0.4 // Suaviza o tempo de repulsão
             },
-            "interactivity": {
-                "events": {
-                    "onhover": { "enable": true, "mode": "repulse" },
-                    "onclick": { "enable": true, "mode": "push" }
-                },
-                "modes": {
-                    "repulse": { "distance": 100 },
-                    "push": { "particles_nb": 4 }
-                }
-            },
-            "retina_detect": true
-        });
+            "push": {
+                "particles_nb": 4
+            }
+        }
+    },
+    "retina_detect": true
+});
 
         // JavaScript para enviar o formulário
         document.addEventListener("DOMContentLoaded", () => {
@@ -192,9 +217,7 @@
                     const response = await fetch(form.action, {
                         method: form.method,
                         body: formData,
-                        headers: {
-                            "Accept": "application/json",
-                        },
+                        headers: { "Accept": "application/json" },
                     });
 
                     if (response.ok) {
